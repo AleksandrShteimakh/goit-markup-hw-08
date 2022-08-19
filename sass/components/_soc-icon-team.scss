@@ -1,0 +1,62 @@
+.soc-box {
+  display: flex;
+  justify-content: center;
+
+  &-title {
+      margin-right: 10px;
+  
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+}
+
+
+
+
+.icon-soc {
+  margin-right: 5px;
+  fill: #afb1b8;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+    &:focus {
+      fill: var(--primery-white-color);
+    }
+
+  &:last-child {
+      margin-right: 0px;
+    }
+}
+
+
+.icon-link {
+  display: flex;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  fill: var(--primery-white-color);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+      background-color: var(--acent-color);
+    }
+
+  &:hover .icon-soc,
+  &:focus .icon-soc {
+    fill: var(--primery-white-color);
+    }
+}
+
+
+

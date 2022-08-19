@@ -1,0 +1,137 @@
+.header {
+  border-bottom: 2px solid #eeeeee;
+
+  &-box,
+  &-nav {
+      display: flex;
+      align-items: center;
+    }
+
+  &-list {
+      display: flex;
+      margin-left: 93px;
+      row-gap: 32px;
+      column-gap: 50px;
+    }
+
+  &-logo {
+          display: block;
+    
+          font-family: "Raleway", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 26px;
+          line-height: 1.19em;
+          letter-spacing: 0.03em;
+    
+          color: var(--acent-color);
+    
+          &-color {
+            color: var(--primery-black-color);
+          }
+        }
+
+  &-link {
+          position: relative;
+          display: block;
+          padding-top: 32px;
+          padding-bottom: 32px;
+          font-weight: 500;
+          font-style: normal;
+          font-size: 14px;
+          line-height: 1.14em;
+          letter-spacing: 0.02em;
+                  color: var(--title-text-color);
+
+          transition-property: color;
+          transition-duration: 250ms;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
+            &:hover,
+            &:focus {
+              color: var(--acent-color);
+            }
+                }
+}
+
+
+.current {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.02em;
+  color: var(--acent-color);
+
+  &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      display: block;
+  
+      width: 100%;
+      height: 5px;
+      border-radius: 3px;
+      background-color: var(--acent-color);
+    }
+}
+
+.list-info {
+  display: flex;
+  margin-left: auto;
+  row-gap: 32px;
+  column-gap: 50px;
+}
+
+.header-mail,
+.header-number {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.02em;
+  color: var(--primery-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+    &:hover {
+      color: var(--acent-color);
+    }
+}
+
+
+
+.info-ikon {
+  margin-right: 10px;
+  fill: #757575;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .header-mail:hover &,
+  .header-mail:focus & {
+      fill: var(--acent-color);
+    }
+
+    .header-number:hover &,
+    .header-number:focus & {
+          fill: var(--acent-color);
+        }
+}
+
+
+

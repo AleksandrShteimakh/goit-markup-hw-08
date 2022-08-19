@@ -1,0 +1,42 @@
+.footer-soc {
+  display: flex;
+
+  &-item {
+      margin-right: 10px;
+  
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+}
+
+.icon-soc-footer {
+  fill: var(--primery-white-color);
+}
+
+.footer-icon-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+      background-color: var(--acent-color);
+    }
+
+  &:hover .icon-soc-footer,
+  &:focus .icon-soc-footer {
+          fill: var(--primery-white-color);
+        }
+}
+
+
+

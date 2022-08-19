@@ -1,0 +1,116 @@
+.footer {
+  background-color: var(--footer-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &-flex {
+      display: flex;
+    }
+
+  &-list {
+          margin-bottom: 9px;
+    
+      &:last-child {
+            margin-bottom: 0;
+          }
+        }
+  &-logo {
+          display: block;
+          margin-bottom: 20px;
+    
+          font-family: "Raleway";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 26px;
+          line-height: 1.19em;
+          letter-spacing: 0.03em;
+    
+          color: var(--acent-color);
+    
+        &-color {
+            color: var(--primery-white-color);
+          }
+        }
+
+  &-title {
+          margin-bottom: 20px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 1.14;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+    
+          color: #ffffff;
+        }
+
+  &-box {
+          width: 206px;
+          margin-left: 70px;
+          margin-top: 12px;
+        }
+}
+
+
+.footer-item-address {
+  text-decoration: none;
+  margin-bottom: 9px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71em;
+  letter-spacing: 0.03em;
+  color: var(--primery-white-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+      color: var(--acent-color);
+    }
+}
+
+.footer-item-mail {
+  margin-bottom: 9px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71em;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+      color: var(--acent-color);
+    }
+}
+
+.footer-item-number {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71em;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+    &:focus {
+      color: var(--acent-color);
+    }
+}
+
+
