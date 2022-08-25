@@ -1,0 +1,55 @@
+.header-svg {
+//   position: absolute;
+//   left: 100%;
+//  bottom: 100%;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  & .icon-cross {
+      opacity: 0;
+    }
+
+    &.is-open .icon-cross {
+          opacity: 1;
+        }
+
+    &.is-open .icon-menu {
+      opacity: 0;
+    }
+}
+
+.icon-menu .icon-cross {
+background: #000000;
+  
+}
+
+.menu-container {
+  position: absolute;
+
+  opacity: 0;
+  top: 100%;
+  left: 0;
+  height: 796px;
+  width: 100%;
+   padding: 20px;
+    text-align: center;
+  
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    &.is-open {
+opacity: 1;
+    }
+}
+
+
+
+
+
+

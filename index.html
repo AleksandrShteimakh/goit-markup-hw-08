@@ -21,9 +21,17 @@
       <nav class="header-nav">
         <a href="" class="header-logo link">Web<span class="header-logo-color">Studio</span>
         </a>
+        <button type="button" class="menu-button is-open" data-menu-button aria-expanded="false"
+          aria-controls="menu-container">
+          <svg class="header-svg" width="40" height="40" aria-label="переключатель мобильного меню ">
+            <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+            <use class="icon-cross" href="./images/symbol-defs.svg#icon-vector1"></use>
+          </svg>
+
+        </button>
         <ul class="header-list">
           <li class="header-item">
-            <a href="" class="link  current">Студия</a>
+            <a href="" class="link  current header-link">Студия</a>
           </li>
           <li class="header-item">
             <a href="./portfolio.html" class="link header-link">Портфолио</a>
@@ -32,6 +40,11 @@
             <a href="" class="link header-link">Контакты</a>
           </li>
         </ul>
+        <div class="menu-container is-open" id="menu-container" data-menu>
+
+        </div>
+
+
       </nav>
       <ul class="list-info">
         <li class="item-info">
@@ -54,13 +67,13 @@
     </div>
   </header> -->
   <main>
-    <!-- ---------------------герой ------------------------------>
-    <!-- <section class="hero">
+    <!-- ---------------------hero ------------------------------>
+    <section class="hero">
       <div class="container">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
         <button type="button" class="btn" data-modal-open>Заказать услугу</button>
       </div>
-    </section> -->
+    </section>
     <!------------------------main------------------------------>
     <section class="main-work">
       <div class="container">
@@ -147,7 +160,25 @@
         <h2 class="team-title">Наша команда</h2>
         <ul class="team-list">
           <li class="team-item">
-            <img src="./img/img.jpg" alt="Игорь Демьяненко" width="270" class="team-link img-style" />
+            <picture>
+              <source srcset="
+              ./img/desktop-img.jpg 1x, 
+              ./img/desktop-img-2x.jpg 2x" media="
+              (min-width:1200px)">
+
+              <source srcset="
+              ./img/tablet-img.jpg 1x,
+              ./img/tablet-img-2x.jpg 2x" media="
+              (min-width:768px)">
+
+              <source srcset="
+              ./img/mobail-img.jpg 1x, 
+              ./img/mobail-img-2x.jpg 2x" media="
+              (max-width:767px)">
+              <img src="
+              ./img/desktop-img.jpg" alt="Игорь Демьяненко" class="team-link img-style" />
+            </picture>
+
             <div class="team-box">
               <h3 class="team-name">Игорь Демьяненко</h3>
               <p class="team-work">Product Designer</p>
@@ -327,75 +358,77 @@
     </div>
   </section>
   <!-------------------footer--------------------------->
-  <!-- <footer class="footer">
+  <footer class="footer">
     <div class="container footer-flex">
-      <div>
-        <a href="" class="footer-logo link">Web<span class="footer-logo-color">Studio</span></a>
-        <address class="footer-address">
-          <ul>
-            <li class="footer-list">
-              <a href="" class="link footer-item-address">г. Киев, пр-т Леси Украинки, 26</a>
+      <div class="footer-tablet">
+        <div class="footer-adress-centr">
+          <a href="" class="footer-logo link">Web<span class="footer-logo-color">Studio</span></a>
+          <address class="footer-address">
+            <ul>
+              <li class="footer-list">
+                <a href="" class="link footer-item-address">г. Киев, пр-т Леси Украинки, 26</a>
+              </li>
+              <li class="footer-list">
+                <a href="" class="link footer-item-mail">info@example.com</a>
+              </li>
+              <li class="footer-list">
+                <a href="" class="link footer-item-number">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-box">
+
+          <h3 class="footer-title">присоеденяйтесь</h3>
+
+          <ul class="footer-soc">
+            <li class="footer-soc-item">
+              <a href="" class="footer-icon-link"><svg class="icon-soc-footer" height="20px" width="20px">
+                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                </svg></a>
             </li>
-            <li class="footer-list">
-              <a href="" class="link footer-item-mail">info@example.com</a>
+            <li class="footer-soc-item">
+              <a href="" class="footer-icon-link"><svg class="icon-soc-footer" height="20px" width="20px">
+                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                </svg></a>
             </li>
-            <li class="footer-list">
-              <a href="" class="link footer-item-number">+38 099 111 11 11</a>
+            <li class="footer-soc-item">
+              <a href="" class="footer-icon-link"><svg class="icon-soc-footer" height="20px" width="20px">
+                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                </svg></a>
+            </li>
+            <li class="footer-soc-item">
+              <a href="" class="footer-icon-link"><svg class="icon-soc-footer" height="20px" width="20px">
+                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                </svg></a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
-      <div class="footer-box">
 
-        <h3 class="footer-title">присоеденяйтесь</h3>
-
-        <ul class="footer-soc">
-          <li class="footer-soc-item">
-            <a href="" class="footer-icon-link"><svg class="icon-soc-footer" height="20px" width="20px">
-                <use href="./images/symbol-defs.svg#icon-instagram"></use>
-              </svg></a>
-          </li>
-          <li class="footer-soc-item">
-            <a href="" class="footer-icon-link"><svg class="icon-soc-footer" height="20px" width="20px">
-                <use href="./images/symbol-defs.svg#icon-twitter"></use>
-              </svg></a>
-          </li>
-          <li class="footer-soc-item">
-            <a href="" class="footer-icon-link"><svg class="icon-soc-footer" height="20px" width="20px">
-                <use href="./images/symbol-defs.svg#icon-facebook"></use>
-              </svg></a>
-          </li>
-          <li class="footer-soc-item">
-            <a href="" class="footer-icon-link"><svg class="icon-soc-footer" height="20px" width="20px">
-                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-              </svg></a>
-          </li>
-        </ul>
-      </div>
       <div class="footer-form-box">
         <h3 class="footer-title">Подпишитесь на рассылку</h3>
         <form name="signup_form" autocomplete="on" novalidate class="footer-form">
           <label class="lable">
             <input type="email" name="email" class="input" placeholder="E-mail" />
           </label>
-          <button type="submit" class=" footer-btn">Подписаться</button>
 
+        </form>
+        <button type="submit" class=" footer-btn">Подписаться
           <svg class="footer-mail-icon" height="24px" width="24px">
             <use href="./images/symbol-defs.svg#icon-telegram"></use>
           </svg>
-
-        </form>
-
+        </button>
       </div>
     </div>
 
   </footer>
   <div class="backdrop is-hidden" data-modal>
-    <div class="modal"> -->
+    <div class="modal">
 
 
-  <!---------------------modal------------------->
-  <!-- <button class="modal-icon" data-modal-close>
+      <!---------------------modal------------------->
+      <button class="modal-icon" data-modal-close>
         <svg class="modal-close" height="18px" width="18px">
           <use href="./images/symbol-defs.svg#icon-vector1"></use>
         </svg>
@@ -431,10 +464,10 @@
         <label for="coment" class="form-text">Комментарий</label>
         <div class="coment-box">
           <textarea name="coment" id="coment" placeholder="Введите текст" class="form-coment"></textarea>
-        </div> -->
+        </div>
 
-  <!------------checkbox no svg---------->
-  <!-- <div class="box-check">
+        <!------------checkbox no svg---------->
+        <!-- <div class="box-check">
 
           <label class="check" for="treaty">
             <input class="checkbox" type="checkbox" name="treaty" value="weekly" id="treaty">
@@ -443,8 +476,8 @@
             Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
           </label>
         </div> -->
-  <!------------checkbox  svg----------->
-  <!-- <div class="modal-filed">
+        <!------------checkbox  svg----------->
+        <div class="modal-filed">
           <input type="checkbox" name="policy" id="policy" class="modal-check" value="true">
           <label for="policy" class="check-text"><span>
               <svg height="18px" width="18px" class="check-icon">
@@ -459,7 +492,8 @@
         <button type="submit" class="modal-btn">Отправить</button>
       </form>
     </div>
-  </div> -->
+  </div>
+  <script src="./js/header.js"></script>
   <script src="./js/modal.js"></script>
 </body>
 

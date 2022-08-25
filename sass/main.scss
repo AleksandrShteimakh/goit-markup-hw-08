@@ -1,8 +1,12 @@
     @import "./utils/variables";
 
     @import "./base/normalize";
+    
+    @import "./utils/mixin";
 
     @import "./base/container";
+    
+    @import "./components/header-mobil";
 
     @import "./components/header.scss";
     @import "./components/hero.scss";

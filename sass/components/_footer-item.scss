@@ -3,8 +3,21 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+    &-adress-centr {
+
+      text-align: center;
+      margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        width: 232px;
+      }
+    }
+
   &-flex {
-      display: flex;
+      // display: flex;
+      // flex-wrap: wrap;
+      // align-items: center;
+      
     }
 
   &-list {
@@ -45,12 +58,32 @@
         }
 
   &-box {
-          width: 206px;
-          margin-left: 70px;
-          margin-top: 12px;
+  
+
+    // max-width: 206px ;
+    // margin-left: auto;
+    // margin-bottom: auto;
+    text-align: center;
+    align-items: center;
+    
+          // width: 206px;
+          // margin-left: 70px;
+          // margin-top: 12px;
+
+      @media screen and (min-width: 768px) {
+        margin-left: 165px;
+              }
         }
 }
 
+.footer-tablet {
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      margin-left: 60px;
+      }
+}
 
 .footer-item-address {
   text-decoration: none;

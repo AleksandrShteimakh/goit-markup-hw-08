@@ -2,12 +2,19 @@
   background-color: var(--footer-color);
   background-image: linear-gradient(to right,
       rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)),
-    url(../images/offis.jpg);
-
+      rgba(47, 48, 58, 0.4)), 
+    url(../images/header-mobile.jpg);
+    @include retina {
+      background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+      
+          url(../images/header-mobile-2x.jpg);
+      }
+ 
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+
+  padding: 118px 60px;
 
   margin-left: auto;
   margin-right: auto;
@@ -18,25 +25,83 @@
   background-size: cover;
   background-position: center;
 
+@include tablet {
+  background-image: linear-gradient(to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+  
+      url(../images/header-tablet.jpg);
+      @include retina {
+          background-image: linear-gradient(to right,
+              rgba(47, 48, 58, 0.4),
+              rgba(47, 48, 58, 0.4)),
+      
+            url(../images/header-tablet-2x.jpg);
+        }
+}
+
+
+  @include desktop  {
+padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+      url(../images/offis.jpg);
+      @include retina {
+          background-image: linear-gradient(to right,
+              rgba(47, 48, 58, 0.4),
+              rgba(47, 48, 58, 0.4)),
+      
+            url(../images/header-desktop-2x.jpg);
+        }
+  }
+
   &-title {
-      margin-bottom: 30px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 696px;
-  
-      font-style: normal;
-      font-size: 44px;
-      line-height: 1.36em;
-  
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--primery-white-color);
+      width: 100%;
+        font-size: 18px;
+        line-height: 1.62;
+      
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        color: #FFFFFF;
+
+    @include tablet {
+      font-size: 26px;
+        line-height: 1.62em;
+        width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+
+    
+
+    @include desktop {
+        margin-bottom: 30px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 696px;
+        
+          font-style: normal;
+          font-size: 44px;
+          line-height: 1.36em;
+        
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: var(--primery-white-color);
+      }
     }
 }
 
 
 button {
   font-family: inherit;
+}
+
+.hero .container {
+  padding: 0;
 }
 
 .btn {
