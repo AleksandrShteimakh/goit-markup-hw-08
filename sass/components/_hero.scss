@@ -1,132 +1,97 @@
 .hero {
-  background-color: var(--footer-color);
-  background-image: linear-gradient(to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)), 
-    url(../images/header-mobile.jpg);
-    @include retina {
-      background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-      
-          url(../images/header-mobile-2x.jpg);
-      }
- 
+  background-color: $tertiary-bg-color;
   text-align: center;
-
-  padding: 118px 60px;
-
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
-
-  max-width: 1600px;
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-top: 60px;
 
-@include tablet {
-  background-image: linear-gradient(to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)),
-  
-      url(../images/header-tablet.jpg);
-      @include retina {
-          background-image: linear-gradient(to right,
-              rgba(47, 48, 58, 0.4),
-              rgba(47, 48, 58, 0.4)),
-      
-            url(../images/header-tablet-2x.jpg);
-        }
-}
+  background-image: linear-gradient(to right, $gradient-hero, $gradient-hero),
+    url(../images/header-img-mob.jpg);
 
-
-  @include desktop  {
-padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)),
-      url(../images/offis.jpg);
-      @include retina {
-          background-image: linear-gradient(to right,
-              rgba(47, 48, 58, 0.4),
-              rgba(47, 48, 58, 0.4)),
-      
-            url(../images/header-desktop-2x.jpg);
-        }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, $gradient-hero, $gradient-hero),
+      url(../images/header-img-mob-2x.jpg);
+  }
+  @include mobile {
+    max-width: 480px;
   }
 
-  &-title {
-      width: 100%;
-        font-size: 18px;
-        line-height: 1.62;
-      
-        text-align: center;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        margin-bottom: 30px;
-        color: #FFFFFF;
+  @include tablet {
+    max-width: 768px;
+    margin-top: 80px;
 
-    @include tablet {
-      font-size: 26px;
-        line-height: 1.62em;
-        width: 360px;
-        margin-left: auto;
-        margin-right: auto;
-    } 
+    background-image: linear-gradient(to right, $gradient-hero, $gradient-hero),
+      url(../images/header-img-tab.jpg);
 
-    
-
-    @include desktop {
-        margin-bottom: 30px;
-          margin-left: auto;
-          margin-right: auto;
-          width: 696px;
-        
-          font-style: normal;
-          font-size: 44px;
-          line-height: 1.36em;
-        
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-          color: var(--primery-white-color);
-      }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, $gradient-hero, $gradient-hero),
+        url(../images/header-img-tab-2x.jpg);
     }
+  }
+
+  @include desktop {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: linear-gradient(to right, $gradient-hero, $gradient-hero),
+      url(../images/header-img-desk.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, $gradient-hero, $gradient-hero),
+        url(../images/header-img-desk-2x.jpg);
+    }
+  }
 }
 
+.hero__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  color: $primay-bg-color;
+  font-weight: 900;
+  font-size: 21px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  max-width: 360px;
 
-button {
+  @include mobile {
+    max-width: 360px;
+    font-size: 26px;
+  }
+
+  @include tablet {
+    max-width: 360px;
+  }
+  @include desktop {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+.hero__button {
+  padding: 10px 32px 10px 32px;
+  color: $primay-bg-color;
+  background-color: $button-link-primary;
   font-family: inherit;
-}
-
-.hero .container {
-  padding: 0;
-}
-
-.btn {
-  text-align: center;
-  min-width: 200px;
-  padding: 10px 32px;
-  background-color: var(--acent-color);
-  color: var(--primery-white-color);
-  border-radius: 4px;
-  cursor: pointer;
-
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88em;
+  line-height: 2;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
   letter-spacing: 0.06em;
-
-  transition-property: background;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color $animation;
 
   &:hover,
-    &:focus {
-      color: var(--primery-white-color);
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    }
+  &:focus {
+    background-color: $button-active-color;
+    transition: background-color $animation;
+    opacity: 1;
+  }
 }
-

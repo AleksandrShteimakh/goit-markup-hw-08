@@ -1,37 +1,14 @@
-    @import "./utils/variables";
-
-    @import "./base/normalize";
-    
-    @import "./utils/mixin";
-
-    @import "./base/container";
-    
-    @import "./components/header-mobil";
-
-    @import "./components/header.scss";
-    @import "./components/hero.scss";
-
-    @import "./components/main-content.scss";
-    @import "./components/work";
-
-    @import "./components/taem-content";
-    @import "./components/soc-icon-team";
-
-    @import "./components/client-content";
-
-    @import "./components/footer-item";
-    @import "./components/footer-soc";
-    @import "./components/footer-btn";
-
-    @import "./components/modal";
-    @import "./components/modal-check";
-    @import "./components/modal-btn";
-
-    @import "./portfolio/portfolio-content";
-    @import "./portfolio/portfolio-card";
-
-  
-
-
-
-
+@import './utils/variables';
+@import './utils/reset';
+@import './utils/mixins';
+@import './utils/general-utils';
+@import './components/_mob-menu';
+@import './components/header';
+@import './components/hero';
+@import './components/peculiarity';
+@import './components/work';
+@import './components/our-team';
+@import './components/clients';
+@import './components/footer';
+@import './components/modal';
+@import './components/portfolio';
