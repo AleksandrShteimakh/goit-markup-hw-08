@@ -1421,6 +1421,8 @@ body {
   display: block;
   width: 200px;
   height: 50px;
+  font-weight: 700;
+  font-size: 16px;
   padding: 10px 55px 10px 56px;
   background-color: #2196f3;
   color: #ffffff;
